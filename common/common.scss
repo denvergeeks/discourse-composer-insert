@@ -1,13 +1,13 @@
-// * highlighter background color override * //
+// * insert background color override * //
 
-@if $highlighter_background_color_override !="" {
+@if $insert_background_color_override !="" {
 
   .cooked,
   .d-editor-preview {
-    mark {
-      background-color: $highlighter_background_color_override;
+    ins {
+      background-color: $insert_background_color_override;
       border-radius: 3px;
-      outline: 2px solid $highlighter_background_color_override;
+      outline: 2px solid $insert_background_color_override;
     }
   }
 }
@@ -16,22 +16,22 @@
 
   .cooked,
   .d-editor-preview {
-    mark {
-      background-color: var(--highlight-medium);
+    ins {
+      background-color: var(--success-low);
       border-radius: 3px;
-      outline: 2px solid var(--highlight-medium);
+      outline: 2px solid var(--success-low);
     }
   }
 }
 
-// * highlighter text color override * //
+// * insert text color override * //
 
-@if $highlighter_text_color_override !="" {
+@if $insert_text_color_override !="" {
 
   .cooked,
   .d-editor-preview {
-    mark {
-      color: $highlighter_text_color_override;
+    ins {
+      color: $insert_text_color_override;
     }
   }
 }
@@ -40,7 +40,7 @@
 
   .cooked,
   .d-editor-preview {
-    mark {
+    ins {
       color: var(--color);
     }
   }
