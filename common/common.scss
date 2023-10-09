@@ -1,7 +1,7 @@
 // * insert background color override * //
 
 button.btn.no-text.btn-icon.composer_insert_button svg.fa.d-icon.d-icon-highlighter.svg-icon.svg-string {
-    border-bottom: 1px solid var(--primary-medium) !important;
+    border-bottom: 2px solid var(--primary-medium) !important;
 }
 
 @if $insert_background_color_override !="" {
