@@ -1,8 +1,9 @@
 // * insert button icon color override * //
-
+/*
 .d-editor-button-bar .btn .d-icon,
 .d-editor-button-bar .btn .d-icon:hover,
 .btn.ok .d-icon, .btn.ok .d-icon:hover,
+*/
 .d-editor-button-bar .btn .no-text .btn-icon .composer_insert_button {
  color: var(--success-low) !important;
 }
