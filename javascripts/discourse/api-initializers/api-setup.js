@@ -3,8 +3,8 @@ import loadScript from "discourse/lib/load-script";
 import I18n from "I18n";
 
 async function applyHighlight(element) {
-  const highlights = element.querySelectorAll("mark");
-  if (!highlights.length) {
+  const inserts = element.querySelectorAll("ins");
+  if (!inserts.length) {
     return;
   }
 }
@@ -13,17 +13,17 @@ export default apiInitializer("0.11.1", (api) => {
   const { iconNode } = require("discourse-common/lib/icon-library");
   let icon = iconNode("highlighter");
   const currentLocale = I18n.currentLocale();
-  // I18n.translations[currentLocale].js.highlight_button_title = I18n.t(themePrefix("composer_highlight_button_title"));
-  // I18n.translations[currentLocale].js.composer.highlight_button_text = I18n.t(themePrefix("composer_highlight_button_text"));
-  I18n.translations[currentLocale].js.highlight_button_title = "Highlight Text";
+  // I18n.translations[currentLocale].js.insert_button_title = I18n.t(themePrefix("composer_insert_button_title"));
+  // I18n.translations[currentLocale].js.composer.insert_button_text = I18n.t(themePrefix("composer_insert_button_text"));
+  I18n.translations[currentLocale].js.insert_button_title = "Insert Text";
   I18n.translations[currentLocale].js.composer.this = "this";
-  // I18n.translations[currentLocale].js.composer.highlight_button_text = "Highlight Text";
+  // I18n.translations[currentLocale].js.composer.insert_button_text = "Insert Text";
 
   api.modifyClass("controller:composer", {
-    pluginId: "highlight",
+    pluginId: "insert",
     actions: {
-      highlightButton() {
-        this.get("toolbarEvent").applySurround("\n" + `<mark>` + "\n</mark>\n");
+      insertButton() {
+        this.get("toolbarEvent").applySurround("\n" + `<ins>` + "\n</ins>\n");
       },
     },
   });
@@ -31,15 +31,15 @@ export default apiInitializer("0.11.1", (api) => {
   // add button to the toolbar
   api.onToolbarCreate((toolbar) => {
     toolbar.addButton({
-      id: "composer_highlight_button",
+      id: "composer_insert_button",
       group: "extras",
       icon: "highlighter",
-      shortcut: "H",
+      shortcut: "I",
       preventFocus: true,
       trimLeading: true,
-      title: "highlight_button_title",
+      title: "insert_button_title",
       // perform: e => e.applySurround('<span>[wrap=highlight]', '[/wrap]</span>', 'this')
-      perform: (e) => e.applySurround("<mark>", "</mark>", "this"),
+      perform: (e) => e.applySurround("<ins>", "</ins>", "this"),
     });
   });
 
@@ -48,6 +48,6 @@ export default apiInitializer("0.11.1", (api) => {
       const id = helper ? `post_${helper.getModel().id}` : "composer";
       applyHighlight(elem, id);
     },
-    { id: "wrap-mark" }
+    { id: "wrap-insert" }
   );
 });
