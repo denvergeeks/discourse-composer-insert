@@ -38,7 +38,7 @@ export default apiInitializer("0.11.1", (api) => {
       preventFocus: true,
       trimLeading: true,
       title: "insert_button_title",
-      // perform: e => e.applySurround('<span>[wrap=highlight]', '[/wrap]</span>', 'this')
+      // perform: e => e.applySurround('<span>[wrap=insert]', '[/wrap]</span>', 'this')
       perform: (e) => e.applySurround("<ins>", "</ins>", "this"),
     });
   });
