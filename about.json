@@ -1,9 +1,9 @@
 {
-  "name": "Highlighter Composer Button",
+  "name": "Composer Insert Button",
   "component": true,
   "authors": ["denvergeeks", "Jay Pfaffman"],
-  "about_url": "https://github.com/denvergeeks/discourse-highlight-wrap-theme-component",
-  "about": "Adds a text highlighter button to the composer",
+  "about_url": "https://github.com/denvergeeks/discourse-composer-insert",
+  "about": "Adds an insert (<ins>this</ins>) button to the composer",
   "version": 0.1,
   "assets": {
    "icons-sprite": "/assets/highlighter.svg"
