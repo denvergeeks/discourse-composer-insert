@@ -2,7 +2,7 @@ import { apiInitializer } from "discourse/lib/api";
 import loadScript from "discourse/lib/load-script";
 import I18n from "I18n";
 
-async function applyHighlight(element) {
+async function applyInsert(element) {
   const inserts = element.querySelectorAll("ins");
   if (!inserts.length) {
     return;
@@ -46,7 +46,7 @@ export default apiInitializer("0.11.1", (api) => {
   api.decorateCookedElement(
     async (elem, helper) => {
       const id = helper ? `post_${helper.getModel().id}` : "composer";
-      applyHighlight(elem, id);
+      applyInsert(elem, id);
     },
     { id: "wrap-insert" }
   );
