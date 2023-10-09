@@ -1,29 +1,11 @@
-// * insert button icon color override * //
-/*
-.d-editor-button-bar .btn .d-icon,
-.d-editor-button-bar .btn .d-icon:hover,
-.btn.ok .d-icon, .btn.ok .d-icon:hover,
-*/
-/*
-.d-editor-button-bar button.btn.no-text.btn-icon.composer_insert_button svg.fa.d-icon.d-icon-highlighter.svg-icon.svg-string {
- color: var(--success-low) !important;
- border-bottom: 1px solid var(--primary-medium) !important;
-}
-*/
-
-
-
 // * insert background color override * //
 
 @if $insert_background_color_override !="" {
 
-
-.d-editor-button-bar button.btn.no-text.btn-icon.composer_insert_button svg.fa.d-icon.d-icon-highlighter.svg-icon.svg-string {
- color: $insert_background_color_override;
- border-bottom: 1px solid var(--primary-medium) !important;
-}
-
- 
+  .d-editor-button-bar button.btn.no-text.btn-icon.composer_insert_button svg.fa.d-icon.d-icon-highlighter.svg-icon.svg-string {
+    color: $insert_background_color_override;
+    border-bottom: 1px solid var(--primary-medium) !important;
+  }
 
   .cooked,
   .d-editor-preview {
@@ -37,12 +19,11 @@
 
 @else {
 
-
- .d-editor-button-bar button.btn.no-text.btn-icon.composer_insert_button svg.fa.d-icon.d-icon-highlighter.svg-icon.svg-string {
- color: var(--success-low) !important;
- border-bottom: 1px solid var(--primary-medium) !important;
-}
-
+  .d-editor-button-bar button.btn.no-text.btn-icon.composer_insert_button svg.fa.d-icon.d-icon-highlighter.svg-icon.svg-string {
+    color: var(--success-low) !important;
+    border-bottom: 1px solid var(--primary-medium) !important;
+  }
+ 
   .cooked,
   .d-editor-preview {
     ins {
