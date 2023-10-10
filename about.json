@@ -2,7 +2,7 @@
   "name": "Composer Inserted Button",
   "component": true,
   "authors": "@denvergeeks",
-  "about_url": "https://github.com/denvergeeks/discourse-composer-insert",
+  "about_url": "https://github.com/denvergeeks/discourse-composer-inserted",
   "about": "Adds an inserted (<ins>this</ins>) button to the composer",
   "version": 0.1,
   "assets": {
