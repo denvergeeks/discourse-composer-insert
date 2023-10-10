@@ -34,7 +34,7 @@ export default apiInitializer("0.11.1", (api) => {
       id: "composer_inserted_button",
       group: "extras",
       icon: "highlighter",
-      shortcut: "I",
+      shortcut: "N",
       preventFocus: true,
       trimLeading: true,
       title: "inserted_button_title",
