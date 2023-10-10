@@ -9,7 +9,7 @@ button.btn.no-text.btn-icon.composer_inserted_button:after {
 
 @if $inserted_background_color_override !="" {
 
-  button.btn.no-text.btn-icon.composer_insert_button {
+  button.btn.no-text.btn-icon.composer_inserted_button {
     color: $inserted_background_color_override;
   }
 
