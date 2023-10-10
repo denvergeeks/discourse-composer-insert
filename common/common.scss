@@ -1,31 +1,31 @@
-// * insert background color override * //
+// * inserted background color override * //
 
-button.btn.no-text.btn-icon.composer_insert_button:after {
+button.btn.no-text.btn-icon.composer_inserted_button:after {
   position: absolute;
   content: "__";
   color: var(--primary-medium);
   /* padding-bottom: 15px; */
 }
 
-@if $insert_background_color_override !="" {
+@if $inserted_background_color_override !="" {
 
   button.btn.no-text.btn-icon.composer_insert_button {
-    color: $insert_background_color_override;
+    color: $inserted_background_color_override;
   }
 
   .cooked,
   .d-editor-preview {
     ins {
-      background-color: $insert_background_color_override;
+      background-color: $inserted_background_color_override;
       border-radius: 3px;
-      outline: 2px solid $insert_background_color_override;
+      outline: 2px solid $inserted_background_color_override;
     }
   }
 }
 
 @else {
 
-  button.btn.no-text.btn-icon.composer_insert_button {
+  button.btn.no-text.btn-icon.composer_inserted_button {
     color: var(--success-low) !important;
   }
  
@@ -39,14 +39,14 @@ button.btn.no-text.btn-icon.composer_insert_button:after {
   }
 }
 
-// * insert text color override * //
+// * inserted text color override * //
 
-@if $insert_text_color_override !="" {
+@if $inserted_text_color_override !="" {
 
   .cooked,
   .d-editor-preview {
     ins {
-      color: $insert_text_color_override;
+      color: $inserted_text_color_override;
     }
   }
 }
