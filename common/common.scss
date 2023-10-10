@@ -1,15 +1,17 @@
 // * insert background color override * //
 
-button.btn.no-text.btn-icon.composer_insert_button svg.fa.d-icon.d-icon-highlighter:after {
-    /* border-bottom: 2px solid var(--primary-medium) !important; */
+button.btn.no-text.btn-icon.composer_insert_button svg.fa.d-icon.d-icon-highlighter {
+    /* border-bottom: 2px solid var(--primary-medium) !important; */   
+}
+
+button.btn.no-text.btn-icon.composer_insert_button:after {
   position: absolute;
-  content: "______";
+  content: "----";
   color: var(--primary-medium);
   font-weight: 700;
   font-size: 1.7em;
   left: 7px;
   top: -10px;
-    
 }
 
 @if $insert_background_color_override !="" {
