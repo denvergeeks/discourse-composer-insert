@@ -1,14 +1,10 @@
 // * insert background color override * //
 
-button.btn.no-text.btn-icon.composer_insert_button svg.fa.d-icon.d-icon-highlighter {
-    /* border-bottom: 2px solid var(--primary-medium) !important; */   
-}
-
 button.btn.no-text.btn-icon.composer_insert_button:after {
   position: absolute;
   content: "__";
   color: var(--primary-medium);
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
 }
 
 @if $insert_background_color_override !="" {
