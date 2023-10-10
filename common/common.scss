@@ -11,7 +11,7 @@ button.btn.no-text.btn-icon.composer_inserted_button:after {
 
   button.btn.no-text.btn-icon.composer_inserted_button {
     color: var(--primary);
-    background-color: $inserted_background_color_override !important;
+    background-color: $inserted_background_color_override;
     box-shadow: inset 0 0 0 5px var(--secondary);
     border: none;
   }
@@ -29,7 +29,8 @@ button.btn.no-text.btn-icon.composer_inserted_button:after {
 @else {
 
   button.btn.no-text.btn-icon.composer_inserted_button {
-    background-color: var(--success-low) !important;
+    color: var(--primary);
+    background-color: var(--success-low);
     box-shadow: inset 0 0 0 5px var(--secondary);
     border: none;
   }
